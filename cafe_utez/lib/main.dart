@@ -22,7 +22,9 @@ class CafeUtezApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // El provider va ARRIBA de MaterialApp: así la ruta que se abre con
     // Navigator.push también encuentra el ViewModel.
-    return ChangeNotifierProvider(
+    // create corre una sola vez; el provider libera el ViewModel al salir.
+    return ChangeNotifierProvider<PedidosViewModel>(
+      // La cascada (..) llama a cargar() y entrega el ViewModel, no el Future.
       create: (_) => PedidosViewModel(repositorio)..cargar(),
       child: MaterialApp(
         title: 'Cafetería UTEZ',
