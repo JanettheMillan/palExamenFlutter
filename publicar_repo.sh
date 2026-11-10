@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Publica este repo como PÚBLICO en las dos cuentas de GitHub usando tu sesión de gh:
-#   - EnriqueLanda2/PRE-EXAMEN-UNIDAD-II-cafe-utez   (remote: origin)
-#   - JanettheMillan/PRE-EXAMEN-UNIDAD-II-cafe-utez  (remote: janette)
+#   - EnriqueLanda2/palExamenFlutter   (remote: origin)
+#   - JanettheMillan/palExamenFlutter  (remote: janette)
 # Sube las dos ramas: main (solución + kit + guía) y profesor (repo original del profe).
 #
 #   bash publicar_repo.sh
 set -euo pipefail
 
 cd "$(dirname "$0")"
-REPO="PRE-EXAMEN-UNIDAD-II-cafe-utez"
+REPO="palExamenFlutter"
 DESC="Pre-examen Unidad II: Cafetería UTEZ (Flutter, MVVM, provider) + kit del profe"
 
 # Cuenta activa actual, para dejarla igual al final.

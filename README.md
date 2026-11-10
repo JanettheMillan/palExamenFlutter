@@ -31,19 +31,23 @@ PRE-EXAMEN-UNIDAD-II/
 
 ## 1. Primera vez: dejarlo corriendo
 
-El repo solo trae `lib/`, `test/` y `pubspec.yaml`. Las carpetas de plataforma (`web/`, `android/`, `ios/`, `macos/`) se generan en tu máquina:
+El repo ya trae las carpetas de plataforma (`web/`, `macos/`, `android/`, `ios/`), así que basta con:
 
 ```bash
-# (una sola vez, con internet) — deja provider en la caché para trabajar offline
+cd cafe_utez
+flutter pub get
+flutter run -d chrome        # o: flutter run -d macos
+```
+
+Para el examen (sin internet), deja provider en la caché **una sola vez, con internet**:
+
+```bash
 dart pub cache add provider --version 6.1.5+1
 dart pub cache add nested --version 1.0.0
-
-cd cafe_utez
-flutter create --empty --org mx.edu.utez --project-name cafe_utez .   # no pisa lib/ ni test/
-rm -f test/widget_test.dart          # si apareció: el script exige UNA sola prueba
-flutter pub get
-flutter run -d chrome
 ```
+
+> Si alguna vez falta una plataforma ("This application is not configured to build on the web"), regénérala sin pisar `lib/`:
+> `flutter create --org mx.edu.utez --project-name cafe_utez --platforms=web,macos .` y luego `rm -f test/widget_test.dart README.md` (el script exige UNA sola prueba).
 
 Verificar como lo hará el docente:
 
