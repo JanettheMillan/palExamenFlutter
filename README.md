@@ -1,19 +1,10 @@
 # Pre-examen Unidad II — Cafetería UTEZ (Flutter · MVVM · provider)
 
-Repo de estudio para el examen práctico de la Unidad II.
-
-| Rama | Qué contiene |
-|------|--------------|
-| `main` | Mi solución completa (`cafe_utez/`) + el kit del profe (`kit/`) + esta guía |
-| `profesor` | El repo original del profe, tal cual: [cristiancampos-docente/PRE-EXAMEN-UNIDAD-II](https://github.com/cristiancampos-docente/PRE-EXAMEN-UNIDAD-II) |
+Repo de estudio para el examen práctico de la Unidad II: mi solución (`cafe_utez/`) + esta guía.
 
 ```
-PRE-EXAMEN-UNIDAD-II/
+palExamenFlutter/
 ├── README.md                ← esta guía
-├── kit/                     ← del profe (no se modifica)
-│   ├── verificar_practica.sh    revisa capas y cableado (5 pts)
-│   ├── autoevaluacion_test.dart batería R1–R4 (75 pts)
-│   └── autoevaluar.sh           suma todo como en el examen (90 pts)
 └── cafe_utez/               ← la app
     ├── pubspec.yaml         name: cafe_utez + provider
     ├── lib/
@@ -49,15 +40,15 @@ dart pub cache add nested --version 1.0.0
 > Si alguna vez falta una plataforma ("This application is not configured to build on the web"), regénérala sin pisar `lib/`:
 > `flutter create --org mx.edu.utez --project-name cafe_utez --platforms=web,macos .` y luego `rm -f test/widget_test.dart README.md` (el script exige UNA sola prueba).
 
-Verificar como lo hará el docente:
+Verificar:
 
 ```bash
 flutter test                              # tu prueba
 flutter analyze lib                       # debe decir: No issues found!
-cd ..
-bash kit/verificar_practica.sh cafe_utez  # script de capas: todo OK
-bash kit/autoevaluar.sh cafe_utez         # 90 / 90
 ```
+
+> El kit de autoevaluación del profe **no viene en este repo**. Si lo tienes, cópialo a `kit/` (está en `.gitignore`, no se sube) y corre desde la raíz:
+> `bash kit/verificar_practica.sh cafe_utez` (todo OK) y `bash kit/autoevaluar.sh cafe_utez` (90 / 90).
 
 ---
 
@@ -220,4 +211,4 @@ Si sacas 90/90 con tiempo de sobra, estás listo. Si pierdes puntos, `autoevalua
 - [ ] Script OK · `flutter analyze lib` limpio · `flutter test` verde
 - [ ] `flutter clean` + `zip -r MATRICULA_APELLIDO_cafe_utez.zip cafe_utez`
 
-> Fuente: [Práctica guiada pre-examen — Unidad II (Notion)](https://spot-duke-7b6.notion.site/Pr-ctica-guiada-pre-examen-Unidad-II-Cafeter-a-UTEZ-411e73d41d938044972fd9a374ec97a8) y el kit del profe.
+> Fuente: [Práctica guiada pre-examen — Unidad II (Notion)](https://spot-duke-7b6.notion.site/Pr-ctica-guiada-pre-examen-Unidad-II-Cafeter-a-UTEZ-411e73d41d938044972fd9a374ec97a8).
